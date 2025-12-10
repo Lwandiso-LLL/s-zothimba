@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ navOpen: false }">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Lwandiso Nunu">
+    <title>Mazz-Fuels ~ About Us</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="bg-[#FFFFFF] text-[#4B4B4B]">
+
+    <!-- Header (same as index.html) -->
+    <header class="bg-[#003366] shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/logo.png" alt="Mazz-Fuels Logo" class="h-20 w-auto">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a href="index.html" class="text-white hover:text-[#007BFF]">Home</a>
+                <a href="services.html" class="text-white hover:text-[#007BFF]">Services</a>
+                <a href="business.html" class="text-white hover:text-[#007BFF]">Business</a>
+                <a href="download-app.html" class="text-white hover:text-[#007BFF]">Download App</a>
+                <a href="blog.html" class="text-white hover:text-[#007BFF]">Blog</a>
+                <a href="contact.html" class="text-white hover:text-[#007BFF]">Contact</a>
+                <a href="about.html" class="text-white hover:text-[#007BFF] font-semibold underline">About Us</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button @click="navOpen = !navOpen" class="md:hidden text-white ml-3">
+                <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+
+                <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="navOpen" class="md:hidden bg-[#003366] px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block text-white hover:text-[#007BFF]">Home</a>
+            <a href="services.html" class="block text-white hover:text-[#007BFF]">Services</a>
+            <a href="business.html" class="block text-white hover:text-[#007BFF]">Business</a>
+            <a href="download-app.html" class="block text-white hover:text-[#007BFF]">Download App</a>
+            <a href="blog.html" class="block text-white hover:text-[#007BFF]">Blog</a>
+            <a href="contact.html" class="block text-white hover:text-[#007BFF]">Contact</a>
+            <a href="about.html" class="block text-white hover:text-[#007BFF] font-semibold underline">About Us</a>
+        </div>
+    </header>
+
+    <!-- ABOUT CONTENT -->
+    <main>
+
+<section class="py-20 px-6 lg:px-20 bg-[#FFFFFF]"
+    x-data="{
+        openModal: null,
+        fullscreenImg: null,
+        team: [
+            {id:1, name:'Mphumzi Zantsi', role:'Co-founder & CEO', img:'mphumzi.png', bio:`Meet Mpumzi Zantsi, one of the visionaries behind Mazz Fuel.<br><br>Mazz Fuel is a smart fuel delivery company focused on providing on-demand fuel services to urban dwellers, busy professionals, fleet managers, and the elderly or disabled. Through a user-friendly mobile app, customers can schedule fuel deliveries, track them in real-time, and access additional services like car washes and minor vehicle maintenance.`},
+            {id:2, name:'Ntsikakayise Mabizela', role:'Operations Manager', img:'ntsikakayise.png', bio:`Ntsikakayise Mabizela is the Operations Manager at Mazz Fuel, bringing operational expertise and efficiency. He oversees the logistics and delivery operations, ensuring timely fuel delivery, vehicle services, and overall satisfaction for both individual and business clients.`},
+        ],
+        prev() {
+            let i = this.team.findIndex(m => m.id === this.openModal);
+            this.openModal = this.team[(i - 1 + this.team.length) % this.team.length].id;
+        },
+        next() {
+            let i = this.team.findIndex(m => m.id === this.openModal);
+            this.openModal = this.team[(i + 1) % this.team.length].id;
+        }
+    }"
+>
+
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4 text-[#003366]">Our Mission: Fueling Convenience</h1>
+        <p class="text-lg max-w-3xl mx-auto text-[#4B4B4B]">
+            Fast. Smart. Reliable. Designed for professionals, families, and businesses — always with safety and customer-first service at our core.
+        </p>
+    </div>
+
+    <!-- Promise + Motivation -->
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <div>
+            <h3 class="text-2xl font-semibold mb-3 text-[#007BFF]">Our Promise</h3>
+            <p class="text-[#4B4B4B] leading-relaxed">
+                At Mazz-Fuels, we believe that convenience shouldn’t come at the cost of safety. Every delivery is efficient, transparent, and secure.
+            </p>
+        </div>
+        <div>
+            <h3 class="text-2xl font-semibold mb-3 text-[#007BFF]">What Drives Us</h3>
+            <p class="text-[#4B4B4B] leading-relaxed">
+                Innovation, accountability, and reliability. We create seamless fueling solutions that empower people and businesses.
+            </p>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="mt-20">
+        <h2 class="text-3xl font-bold text-center mb-10 text-[#003366]">Our Team</h2>
+
+        <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+            <template x-for="member in team" :key="member.id">
+                <div class="bg-white shadow-md rounded-2xl p-6 border border-[#D9D9D9] hover:shadow-lg transition">
+
+                    <h3 class="text-xl font-semibold text-[#1B2A41]" x-text="member.name"></h3>
+                    <p class="text-[#4B4B4B] mb-4" x-text="member.role"></p>
+
+                    <img :src="'images/team/' + member.img"
+                         class="mx-auto w-32 h-32 rounded-full mb-4 object-cover border-4 border-[#007BFF] cursor-zoom-in"
+                         @click="fullscreenImg = member.img">
+
+                    <button @click="openModal = member.id"
+                        class="px-5 py-2.5 text-white rounded-lg bg-gradient-to-r from-[#003366] to-[#007BFF] hover:opacity-90 transition">
+                        View More Details
+                    </button>
+
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <template x-for="member in team" :key="member.id">
+        <div x-show="openModal === member.id" x-cloak
+            class="fixed inset-0 flex items-center justify-center z-50">
+
+            <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"
+                 @click="openModal = null"></div>
+
+            <div class="bg-white rounded-2xl p-8 max-w-xl w-full relative shadow-lg max-h-[90vh] overflow-auto border border-gray-300">
+
+                <button @click="openModal = null"
+                        class="absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-[#003366]">&times;</button>
+
+                <div class="text-center">
+
+                    <img :src="'images/team/' + member.img"
+                         class="mx-auto w-32 h-32 rounded-full mb-4 border-4 border-[#007BFF] cursor-zoom-in"
+                         @click="fullscreenImg = member.img">
+
+                    <h3 class="text-2xl font-semibold mb-2 text-[#003366]" x-text="member.name"></h3>
+
+                    <p class="text-left text-[#4B4B4B]" x-html="member.bio"></p>
+
+                    <div class="flex justify-between mt-6">
+                        <button @click="prev()"
+                            class="px-4 py-2 text-white rounded-lg bg-gradient-to-r from-[#007BFF] to-[#003366]">
+                            Previous
+                        </button>
+                        <button @click="next()"
+                            class="px-4 py-2 text-white rounded-lg bg-gradient-to-r from-[#003366] to-[#007BFF]">
+                            Next
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Fullscreen Image -->
+    <div x-show="fullscreenImg" x-cloak
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
+        @click="fullscreenImg = null">
+
+        <img :src="'images/team/' + fullscreenImg"
+             class="max-w-full max-h-full object-contain">
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-[#003366] text-white py-8 mt-10">
+        <div class="container mx-auto text-center space-y-4">
+            <p>&copy; <span id="year"></span> Mazz-Fuels. All rights reserved.</p>
+
+            <div class="space-x-4">
+                <a href="index.html" class="hover:text-[#007BFF]">Home</a>
+                <a href="services.html" class="hover:text-[#007BFF]">Services</a>
+                <a href="business.html" class="hover:text-[#007BFF]">Business</a>
+                <a href="download-app.html" class="hover:text-[#007BFF]">Download App</a>
+                <a href="blog.html" class="hover:text-[#007BFF]">Blog</a>
+                <a href="contact.html" class="hover:text-[#007BFF]">Contact</a>
+                <a href="about.html" class="hover:text-[#007BFF]">About Us</a>
+            </div>
+        </div>
+    </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
