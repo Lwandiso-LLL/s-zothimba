@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en" x-data="{ open: false }">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Lwandiso Nunu">
   <title>Mazz Fuels</title>
 
   <!-- Tailwind (CDN) -->
@@ -26,29 +27,23 @@
         <img src="images/logo.png" alt="Mazz-Fuels Logo" class="h-20 w-auto">
       </a>
 
-      <!-- MOBILE: Login + Create Account (Icons Only) -->
+      <!-- MOBILE: Login + Create Account (disabled) -->
       <div class="flex space-x-3 md:hidden">
-
-        <!-- Login Icon -->
-        <a href="login.html"
-           class="bg-green-600 p-2 rounded-full flex items-center justify-center hover:opacity-90">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+        <!-- Icons show but redirect to Coming Soon -->
+        <button class="bg-green-600 p-2 rounded-full text-white cursor-not-allowed opacity-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M5.121 17.804A4 4 0 019 16h6a4 4 0 013.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
-        </a>
-
-        <!-- Create Account Icon -->
-        <a href="register.html"
-           class="border border-green-600 p-2 rounded-full flex items-center justify-center hover:bg-green-600 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 hover:text-white"
+        </button>
+        <button class="border border-green-600 p-2 rounded-full cursor-not-allowed opacity-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400"
                fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M12 4v16m8-8H4"/>
           </svg>
-        </a>
-
+        </button>
       </div>
 
       <!-- Desktop Nav -->
@@ -61,26 +56,23 @@
         <a href="contact.html" class="text-white hover:text-[#007BFF]">Contact</a>
         <a href="about.html" class="text-white hover:text-[#007BFF]">About Us</a>
 
-        <!-- DESKTOP ICON: Login -->
-        <a href="login.html"
-           class="bg-green-600 p-2 rounded-full flex items-center justify-center hover:opacity-90 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+        <!-- Disabled buttons -->
+        <button class="bg-green-600 p-2 rounded-full text-white opacity-50 cursor-not-allowed">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M5.121 17.804A4 4 0 019 16h6a4 4 0 013.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
-        </a>
+        </button>
 
-        <!-- DESKTOP ICON: Create Account -->
-        <a href="register.html"
-           class="border border-green-600 p-2 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+        <button class="border border-green-600 p-2 rounded-full opacity-50 cursor-not-allowed">
           <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-6 w-6 text-green-400 hover:text-white transition" fill="none"
+               class="h-6 w-6 text-green-400" fill="none"
                viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M12 4v16m8-8H4"/>
           </svg>
-        </a>
+        </button>
       </nav>
 
       <!-- Hamburger -->
@@ -108,26 +100,14 @@
       <a href="contact.html" class="block text-white hover:text-[#007BFF]">Contact</a>
       <a href="about.html" class="block text-white hover:text-[#007BFF]">About Us</a>
 
-      <!-- MOBILE MENU ICON BUTTONS -->
-      <a href="login.html"
-         class="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-md font-semibold">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M5.121 17.804A4 4 0 019 16h6a4 4 0 013.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-        </svg>
-        <span>Login</span>
-      </a>
+      <!-- Disabled Login/Create -->
+      <button class="w-full bg-green-600 text-white px-4 py-2 rounded-md opacity-50 cursor-not-allowed">
+        Login (Coming Soon)
+      </button>
 
-      <a href="register.html"
-         class="flex items-center space-x-2 border border-green-600 text-green-400 px-4 py-2 rounded-md font-semibold hover:bg-green-600 hover:text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 4v16m8-8H4"/>
-        </svg>
-        <span>Create Account</span>
-      </a>
+      <button class="w-full border border-green-600 text-green-400 px-4 py-2 rounded-md opacity-50 cursor-not-allowed">
+        Create Account (Coming Soon)
+      </button>
     </div>
   </header>
 
@@ -143,254 +123,99 @@
       <h1 class="text-4xl lg:text-6xl font-bold mb-6 text-[#003366]">On-Demand Services Delivered to You</h1>
 
       <p class="text-lg lg:text-2xl mb-8 text-[#4B4B4B] max-w-2xl">
-        Fuel delivery, car wash, maintenance, and LP gas — all at your location. Fast, reliable, and professional service wherever you are.
+        Fuel delivery, car wash, maintenance, and LP gas — all coming soon to your location!
       </p>
 
       <div class="w-full max-w-xl flex gap-3">
         <input
           type="text"
-          placeholder="Enter your address or zip code"
-          class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-[#003366] focus:border-[#003366]"
+          placeholder="Service Coming Soon"
+          disabled
+          class="flex-1 px-4 py-3 rounded-lg border border-gray-300 bg-gray-100 cursor-not-allowed"
         />
-        <button class="px-6 py-3 rounded-lg text-white bg-gradient-to-r from-[#003366] to-[#007BFF] shadow hover:opacity-90">Find Services</button>
+        <button class="px-6 py-3 rounded-lg text-white bg-gray-400 cursor-not-allowed">Coming Soon</button>
       </div>
     </section>
 
     <!-- SERVICES -->
     <section class="py-20 px-6 lg:px-20 bg-[#fff2f2]">
-      <h2 class="text-3xl lg:text-4xl font-semibold text-center mb-12 text-[#003366]">Choose Your Service</h2>
+      <h2 class="text-3xl lg:text-4xl font-semibold text-center mb-12 text-[#003366]">Our Services (Preview)</h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
+        <!-- SERVICE CARD TEMPLATE (for all 4 cards) -->
         <!-- Card 1 -->
         <div
-          x-data="{ open:false, accepted:false }"
+          x-data="{ open:false }"
           x-init="$el.classList.add('opacity-0','scale-95'); setTimeout(()=> $el.classList.remove('opacity-0','scale-95'), 150)"
           class="transition-all duration-700 bg-white p-6 rounded-xl shadow-md border border-[#D9D9D9] text-center hover:shadow-xl"
         >
-          <img src="/images/services/fuel.jpg" alt="Fuel Delivery" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+          <img src="images/services/fuel.jpg" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
           <h3 class="text-xl font-bold text-[#003366]">Fuel Delivery</h3>
-          <p class="text-[#4B4B4B] mt-2">20 min</p>
-          <p class="text-2xl font-bold text-[#003366] mt-3">R45</p>
+          <p class="text-[#4B4B4B] mt-2">Coming Soon</p>
 
-          <button @click="open = true" class="mt-5 px-6 py-3 rounded-lg text-white bg-gradient-to-r from-[#003366] to-[#007BFF] shadow hover:opacity-90 w-full">
-            Book Now →
+          <button @click="open = true" class="mt-5 px-6 py-3 rounded-lg text-white bg-gray-400 cursor-not-allowed w-full">
+            Coming Soon
           </button>
 
           <!-- Modal -->
           <div x-show="open" x-transition.opacity class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div x-show="open" x-transition.scale class="bg-white rounded-xl p-6 max-w-md w-full">
-
-              <img src="/images/services/fuel.jpg" class="w-full h-40 object-cover rounded mb-4">
+            <div x-show="open" x-transition.scale class="bg-white rounded-xl p-6 max-w-md w-full text-center">
+              <img src="images/services/fuel.jpg" class="w-full h-40 object-cover rounded mb-4">
 
               <h4 class="text-2xl font-bold text-[#003366]">Fuel Delivery</h4>
-              <p class="mt-2 text-[#4B4B4B]">Premium gasoline delivered directly to your vehicle wherever you are.</p>
-              <p class="mt-3 font-semibold text-[#003366]">Est: 20 min • R45</p>
+              <p class="mt-2 text-[#4B4B4B]">This service will be available soon. Stay tuned!</p>
 
-              <div class="mt-6 flex items-center gap-3">
-                <input type="checkbox" x-model="accepted" class="w-5 h-5 text-[#003366]">
-                <a href="terms.html" class="text-[#003366] underline">I agree to the Terms & Conditions</a>
-              </div>
-
-              <div class="mt-6 grid grid-cols-2 gap-4">
-                <a href="register.html"
-                   :class="accepted ? 'bg-gradient-to-r from-[#003366] to-[#007BFF] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Register an Account
-                </a>
-
-                <a href="login.html"
-                   :class="accepted ? 'border border-[#003366] text-[#003366]' : 'border border-gray-300 text-gray-400 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Login
-                </a>
-              </div>
-
-              <button @click="open = false" class="mt-4 w-full py-3 border border-[#003366] text-[#003366] rounded-lg">Close</button>
-
+              <button @click="open = false" class="mt-6 px-6 py-3 w-full bg-[#003366] text-white rounded-lg">Close</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div
-          x-data="{ open:false, accepted:false }"
-          x-init="$el.classList.add('opacity-0','scale-95'); setTimeout(()=> $el.classList.remove('opacity-0','scale-95'), 270)"
-          class="transition-all duration-700 bg-white p-6 rounded-xl shadow-md border border-[#D9D9D9] text-center hover:shadow-xl"
-        >
-          <img src="/images/services/gas.png" alt="LP Gas Delivery" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+        <!-- Repeat same pattern for other service cards -->
+        <!-- LPG Gas -->
+        <div x-data="{ open:false }" class="transition-all duration-700 bg-white p-6 rounded-xl shadow-md border border-[#D9D9D9] text-center hover:shadow-xl">
+          <img src="images/services/gas.png" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
           <h3 class="text-xl font-bold text-[#003366]">LP Gas Delivery</h3>
-          <p class="text-[#4B4B4B] mt-2">30 min</p>
-          <p class="text-2xl font-bold text-[#003366] mt-3">R65</p>
+          <p class="text-[#4B4B4B] mt-2">Coming Soon</p>
 
-          <button @click="open = true" class="mt-5 px-6 py-3 rounded-lg text-white bg-gradient-to-r from-[#003366] to-[#007BFF] shadow hover:opacity-90 w-full">
-            Book Now →
+          <button class="mt-5 px-6 py-3 rounded-lg text-white bg-gray-400 cursor-not-allowed w-full">
+            Coming Soon
           </button>
-
-          <!-- Modal (same structure) -->
-          <div x-show="open" x-transition.opacity class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div x-show="open" x-transition.scale class="bg-white rounded-xl p-6 max-w-md w-full">
-              <img src="/images/services/gas.png" class="w-full h-40 object-cover rounded mb-4">
-              <h4 class="text-2xl font-bold text-[#003366]">LP Gas Delivery</h4>
-              <p class="mt-2 text-[#4B4B4B]">Safe LP gas cylinder delivery and exchange at your home or business.</p>
-              <p class="mt-3 font-semibold text-[#003366]">Est: 30 min • R65</p>
-
-              <div class="mt-6 flex items-center gap-3">
-                <input type="checkbox" x-model="accepted" class="w-5 h-5 text-[#003366]">
-                <a href="terms.html" class="text-[#003366] underline">I agree to the Terms & Conditions</a>
-              </div>
-
-              <div class="mt-6 grid grid-cols-2 gap-4">
-                <a href="register.html"
-                   :class="accepted ? 'bg-gradient-to-r from-[#003366] to-[#007BFF] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Register an Account
-                </a>
-
-                <a href="login.html"
-                   :class="accepted ? 'border border-[#003366] text-[#003366]' : 'border border-gray-300 text-gray-400 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Login
-                </a>
-              </div>
-
-              <button @click="open = false" class="mt-4 w-full py-3 border border-[#003366] text-[#003366] rounded-lg">Close</button>
-            </div>
-          </div>
         </div>
 
-        <!-- Card 3 -->
-        <div
-          x-data="{ open:false, accepted:false }"
-          x-init="$el.classList.add('opacity-0','scale-95'); setTimeout(()=> $el.classList.remove('opacity-0','scale-95'), 390)"
-          class="transition-all duration-700 bg-white p-6 rounded-xl shadow-md border border-[#D9D9D9] text-center hover:shadow-xl"
-        >
-          <img src="/images/services/wash.jpg" alt="Mobile Car Wash" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+        <!-- Car Wash -->
+        <div x-data="{ open:false }" class="transition-all duration-700 bg-white p-6 rounded-xl shadow-md border border-[#D9D9D9] text-center hover:shadow-xl">
+          <img src="images/services/wash.jpg" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
           <h3 class="text-xl font-bold text-[#003366]">Mobile Car Wash</h3>
-          <p class="text-[#4B4B4B] mt-2">45 min</p>
-          <p class="text-2xl font-bold text-[#003366] mt-3">R35</p>
+          <p class="text-[#4B4B4B] mt-2">Coming Soon</p>
 
-          <button @click="open = true" class="mt-5 px-6 py-3 rounded-lg text-white bg-gradient-to-r from-[#003366] to-[#007BFF] shadow hover:opacity-90 w-full">
-            Book Now →
+          <button class="mt-5 px-6 py-3 rounded-lg text-white bg-gray-400 cursor-not-allowed w-full">
+            Coming Soon
           </button>
-
-          <!-- Modal -->
-          <div x-show="open" x-transition.opacity class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div x-show="open" x-transition.scale class="bg-white rounded-xl p-6 max-w-md w-full">
-              <img src="/images/services/wash.jpg" class="w-full h-40 object-cover rounded mb-4">
-              <h4 class="text-2xl font-bold text-[#003366]">Mobile Car Wash</h4>
-              <p class="mt-2 text-[#4B4B4B]">Professional interior and exterior cleaning at your convenience.</p>
-              <p class="mt-3 font-semibold text-[#003366]">Est: 45 min • R35</p>
-
-              <div class="mt-6 flex items-center gap-3">
-                <input type="checkbox" x-model="accepted" class="w-5 h-5 text-[#003366]">
-                <a href="terms.html" class="text-[#003366] underline">I agree to the Terms & Conditions</a>
-              </div>
-
-              <div class="mt-6 grid grid-cols-2 gap-4">
-                <a href="register.html"
-                   :class="accepted ? 'bg-gradient-to-r from-[#003366] to-[#007BFF] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Register an Account
-                </a>
-
-                <a href="login.html"
-                   :class="accepted ? 'border border-[#003366] text-[#003366]' : 'border border-gray-300 text-gray-400 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Login
-                </a>
-              </div>
-
-              <button @click="open = false" class="mt-4 w-full py-3 border border-[#003366] text-[#003366] rounded-lg">Close</button>
-            </div>
-          </div>
         </div>
 
-        <!-- Card 4 -->
-        <div
-          x-data="{ open:false, accepted:false }"
-          x-init="$el.classList.add('opacity-0','scale-95'); setTimeout(()=> $el.classList.remove('opacity-0','scale-95'), 510)"
-          class="transition-all duration-700 bg-white p-6 rounded-xl shadow-md border border-[#D9D9D9] text-center hover:shadow-xl"
-        >
-          <img src="/images/services/maintenance.jpg" alt="Vehicle Maintenance" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
+        <!-- Maintenance -->
+        <div x-data="{ open:false }" class="transition-all duration-700 bg-white p-6 rounded-xl shadow-md border border-[#D9D9D9] text-center hover:shadow-xl">
+          <img src="images/services/maintenance.jpg" class="w-full h-40 object-cover rounded-lg mb-4 shadow">
           <h3 class="text-xl font-bold text-[#003366]">Vehicle Maintenance</h3>
-          <p class="text-[#4B4B4B] mt-2">60 min</p>
-          <p class="text-2xl font-bold text-[#003366] mt-3">R85</p>
+          <p class="text-[#4B4B4B] mt-2">Coming Soon</p>
 
-          <button @click="open = true" class="mt-5 px-6 py-3 rounded-lg text-white bg-gradient-to-r from-[#003366] to-[#007BFF] shadow hover:opacity-90 w-full">
-            Book Now →
+          <button class="mt-5 px-6 py-3 rounded-lg text-white bg-gray-400 cursor-not-allowed w-full">
+            Coming Soon
           </button>
-
-          <!-- Modal -->
-          <div x-show="open" x-transition.opacity class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div x-show="open" x-transition.scale class="bg-white rounded-xl p-6 max-w-md w-full">
-              <img src="/images/services/maintenance.jpg" class="w-full h-40 object-cover rounded mb-4">
-              <h4 class="text-2xl font-bold text-[#003366]">Vehicle Maintenance</h4>
-              <p class="mt-2 text-[#4B4B4B]">Oil changes, tire checks, diagnostics, and minor repairs.</p>
-              <p class="mt-3 font-semibold text-[#003366]">Est: 60 min • R85</p>
-
-              <div class="mt-6 flex items-center gap-3">
-                <input type="checkbox" x-model="accepted" class="w-5 h-5 text-[#003366]">
-                <a href="terms.html" class="text-[#003366] underline">I agree to the Terms & Conditions</a>
-              </div>
-
-              <div class="mt-6 grid grid-cols-2 gap-4">
-                <a href="register.html"
-                   :class="accepted ? 'bg-gradient-to-r from-[#003366] to-[#007BFF] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Register an Account
-                </a>
-
-                <a href="login.html"
-                   :class="accepted ? 'border border-[#003366] text-[#003366]' : 'border border-gray-300 text-gray-400 cursor-not-allowed'"
-                   class="px-4 py-3 rounded-lg text-center transition"
-                   :style="accepted ? '' : 'pointer-events:none;'">
-                  Login
-                </a>
-              </div>
-
-              <button @click="open = false" class="mt-4 w-full py-3 border border-[#003366] text-[#003366] rounded-lg">Close</button>
-            </div>
-          </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="py-20 px-6 lg:px-20 bg-[#fdfdfc]">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
-        <div><h3 class="text-xl font-bold text-[#003366]">Fast & Reliable</h3><p class="text-[#4B4B4B] mt-2">Average service time 20–30 min.</p></div>
-        <div><h3 class="text-xl font-bold text-[#003366]">Fully Insured</h3><p class="text-[#4B4B4B] mt-2">Licensed & background-checked technicians.</p></div>
-        <div><h3 class="text-xl font-bold text-[#003366]">Expert Team</h3><p class="text-[#4B4B4B] mt-2">Rated 4.8/5 by thousands of users.</p></div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="py-20 px-6 lg:px-20 bg-[#fff2f2]">
-      <h2 class="text-3xl lg:text-4xl font-semibold text-center mb-12 text-[#003366]">What Our Customers Say</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        <div class="bg-white p-6 rounded-xl shadow"><p>"Game changer!"</p><div class="mt-4 font-bold text-[#003366]">Sarah Johnson</div></div>
-        <div class="bg-white p-6 rounded-xl shadow"><p>"Perfect for fleet services."</p><div class="mt-4 font-bold text-[#003366]">Mike Chen</div></div>
-        <div class="bg-white p-6 rounded-xl shadow"><p>"Love the mobile wash!"</p><div class="mt-4 font-bold text-[#003366]">Lisa Rodriguez</div></div>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="py-20 text-center px-6 lg:px-20 bg-[#dbdbd7]">
-      <h2 class="text-3xl lg:text-4xl font-semibold mb-6 text-[#003366]">Ready to Get Started?</h2>
-      <p class="text-[#4B4B4B] mb-8">Join thousands of happy customers.</p>
+      <h2 class="text-3xl lg:text-4xl font-semibold mb-6 text-[#003366]">Exciting Features Coming Soon</h2>
+      <p class="text-[#4B4B4B] mb-8">We are preparing to launch. Stay tuned!</p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="fuel-booking.html" class="px-8 py-4 text-white bg-gradient-to-r from-[#003366] to-[#007BFF] rounded-lg shadow">Schedule Service Now</a>
-        <a href="orders-track.html" class="px-8 py-4 border border-[#003366] text-[#003366] rounded-lg">Track My Order</a>
+        <button class="px-8 py-4 text-white bg-gray-400 rounded-lg cursor-not-allowed">Coming Soon</button>
+        <button class="px-8 py-4 border border-gray-400 text-gray-400 rounded-lg cursor-not-allowed">Coming Soon</button>
       </div>
     </section>
 
@@ -413,7 +238,8 @@
     </div>
   </footer>
 
-  <!-- Custom JS -->
-  <script src="js/app.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
