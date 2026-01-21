@@ -6,28 +6,22 @@
     <meta name="author" content="Lwandiso Nunu">
     <title>Mazz-Fuels ~ About Us</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body class="bg-[#FFFFFF] text-[#4B4B4B]">
 
-    <!-- Header (same as index.html) -->
     <header class="bg-[#003366] shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
 
-            <!-- Logo -->
             <a href="index.html" class="flex items-center space-x-2">
                 <img src="images/logo.png" alt="Mazz-Fuels Logo" class="h-20 w-auto">
             </a>
 
-            <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-4 items-center">
                 <a href="index.html" class="text-white hover:text-[#007BFF]">Home</a>
                 <a href="services.html" class="text-white hover:text-[#007BFF]">Services</a>
@@ -38,7 +32,6 @@
                 <a href="about.html" class="text-white hover:text-[#007BFF] font-semibold underline">About Us</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
             <button @click="navOpen = !navOpen" class="md:hidden text-white ml-3">
                 <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +47,6 @@
             </button>
         </div>
 
-        <!-- Mobile Menu -->
         <div x-show="navOpen" class="md:hidden bg-[#003366] px-4 pt-2 pb-4 space-y-2">
             <a href="index.html" class="block text-white hover:text-[#007BFF]">Home</a>
             <a href="services.html" class="block text-white hover:text-[#007BFF]">Services</a>
@@ -66,7 +58,6 @@
         </div>
     </header>
 
-    <!-- ABOUT CONTENT -->
     <main>
 
 <section class="py-20 px-6 lg:px-20 bg-[#FFFFFF]"
@@ -87,8 +78,6 @@
         }
     }"
 >
-
-    <!-- Section Header -->
     <div class="text-center mb-12">
         <h1 class="text-4xl font-bold mb-4 text-[#003366]">Our Mission: Fueling Convenience</h1>
         <p class="text-lg max-w-3xl mx-auto text-[#4B4B4B]">
@@ -96,7 +85,6 @@
         </p>
     </div>
 
-    <!-- Promise + Motivation -->
     <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
         <div>
             <h3 class="text-2xl font-semibold mb-3 text-[#007BFF]">Our Promise</h3>
@@ -112,7 +100,6 @@
         </div>
     </div>
 
-    <!-- Team Section -->
     <div class="mt-20">
         <h2 class="text-3xl font-bold text-center mb-10 text-[#003366]">Our Team</h2>
 
@@ -137,7 +124,6 @@
         </div>
     </div>
 
-    <!-- Modal -->
     <template x-for="member in team" :key="member.id">
         <div x-show="openModal === member.id" x-cloak
             class="fixed inset-0 flex items-center justify-center z-50">
@@ -176,7 +162,6 @@
         </div>
     </template>
 
-    <!-- Fullscreen Image -->
     <div x-show="fullscreenImg" x-cloak
         class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
         @click="fullscreenImg = null">
@@ -188,23 +173,26 @@
 </section>
 
     </main>
+    
+ <footer class="bg-[#003366] text-white py-8 mt-10">
+    <div class="container mx-auto text-center space-y-4">
+        <p>&copy; <span id="year"></span> Mazz-Fuels. All rights reserved.</p>
 
-    <!-- Footer (same as index.html) -->
-    <footer class="bg-[#003366] text-white py-8 mt-10">
-        <div class="container mx-auto text-center space-y-4">
-            <p>&copy; <span id="year"></span> Mazz-Fuels. All rights reserved.</p>
-
-            <div class="space-x-4">
-                <a href="index.html" class="hover:text-[#007BFF]">Home</a>
-                <a href="services.html" class="hover:text-[#007BFF]">Services</a>
-                <a href="business.html" class="hover:text-[#007BFF]">Business</a>
-                <a href="download-app.html" class="hover:text-[#007BFF]">Download App</a>
-                <a href="blog.html" class="hover:text-[#007BFF]">Blog</a>
-                <a href="contact.html" class="hover:text-[#007BFF]">Contact</a>
-                <a href="about.html" class="hover:text-[#007BFF]">About Us</a>
-            </div>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="index.html" class="hover:text-[#007BFF]">Home</a>
+            <a href="services.html" class="hover:text-[#007BFF] font-semibold underline">Services</a>
+            <a href="business.html" class="hover:text-[#007BFF]">Business</a>
+            <a href="download-app.html" class="hover:text-[#007BFF]">Download App</a>
+            <a href="blog.html" class="hover:text-[#007BFF]">Blog</a>
+            <a href="contact.html" class="hover:text-[#007BFF]">Contact</a>
+            <a href="about.html" class="hover:text-[#007BFF]">About Us</a>
         </div>
-    </footer>
+
+        <p class="text-sm mt-4 text-center">
+            Website developed by <i>Lwandiso Nunu</i>
+        </p>
+    </div>
+</footer>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
