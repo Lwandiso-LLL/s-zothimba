@@ -6,28 +6,22 @@
     <meta name="author" content="Lwandiso Nunu">
     <title>Mazz-Fuels ~ Contact Us</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body class="bg-[#FFFFFF] text-[#4B4B4B]">
 
-    <!-- Header (exact copy from about.html) -->
     <header class="bg-[#003366] shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
 
-            <!-- Logo -->
             <a href="index.html" class="flex items-center space-x-2">
                 <img src="images/logo.png" alt="Mazz-Fuels Logo" class="h-20 w-auto">
             </a>
 
-            <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-4 items-center">
                 <a href="index.html" class="text-white hover:text-[#007BFF]">Home</a>
                 <a href="services.html" class="text-white hover:text-[#007BFF]">Services</a>
@@ -38,7 +32,6 @@
                 <a href="about.html" class="text-white hover:text-[#007BFF]">About Us</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
             <button @click="navOpen = !navOpen" class="md:hidden text-white ml-3">
                 <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +48,6 @@
 
         </div>
 
-        <!-- Mobile Menu -->
         <div x-show="navOpen" class="md:hidden bg-[#003366] px-4 pt-2 pb-4 space-y-2">
             <a href="index.html" class="block text-white hover:text-[#007BFF]">Home</a>
             <a href="services.html" class="block text-white hover:text-[#007BFF]">Services</a>
@@ -67,7 +59,6 @@
         </div>
     </header>
 
-    <!-- Coming Soon Section -->
     <main>
         <section class="py-32 text-center px-6">
             <h1 class="text-4xl font-bold text-[#003366] mb-4">Contact Page Coming Soon</h1>
@@ -78,22 +69,25 @@
         </section>
     </main>
 
-    <!-- Footer (exact copy from about.html) -->
-    <footer class="bg-[#003366] text-white py-8 mt-10">
-        <div class="container mx-auto text-center space-y-4">
-            <p>&copy; <span id="year"></span> Mazz-Fuels. All rights reserved.</p>
+     <footer class="bg-[#003366] text-white py-8 mt-10">
+    <div class="container mx-auto text-center space-y-4">
+        <p>&copy; <span id="year"></span> Mazz-Fuels. All rights reserved.</p>
 
-            <div class="space-x-4">
-                <a href="index.html" class="hover:text-[#007BFF]">Home</a>
-                <a href="services.html" class="hover:text-[#007BFF]">Services</a>
-                <a href="business.html" class="hover:text-[#007BFF]">Business</a>
-                <a href="download-app.html" class="hover:text-[#007BFF]">Download App</a>
-                <a href="blog.html" class="hover:text-[#007BFF]">Blog</a>
-                <a href="contact.html" class="hover:text-[#007BFF] font-semibold underline">Contact</a>
-                <a href="about.html" class="hover:text-[#007BFF]">About Us</a>
-            </div>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="index.html" class="hover:text-[#007BFF]">Home</a>
+            <a href="services.html" class="hover:text-[#007BFF] font-semibold underline">Services</a>
+            <a href="business.html" class="hover:text-[#007BFF]">Business</a>
+            <a href="download-app.html" class="hover:text-[#007BFF]">Download App</a>
+            <a href="blog.html" class="hover:text-[#007BFF]">Blog</a>
+            <a href="contact.html" class="hover:text-[#007BFF]">Contact</a>
+            <a href="about.html" class="hover:text-[#007BFF]">About Us</a>
         </div>
-    </footer>
+
+        <p class="text-sm mt-4 text-center">
+            Website developed by <i>Lwandiso Nunu</i>
+        </p>
+    </div>
+</footer>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
