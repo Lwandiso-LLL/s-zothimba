@@ -21,7 +21,6 @@ body {
     margin: auto;
 }
 
-/* Header */
 .header {
     background: white;
     border-bottom: 1px solid rgba(212,162,76,0.3);
@@ -43,7 +42,7 @@ body {
 .nav {
     display: flex;
     gap: 14px;
-    transition: none; /* reset animation on desktop */
+    transition: none;
 }
 
 .nav a {
@@ -58,7 +57,6 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Desktop nav must always be visible */
 @media (min-width: 769px) {
     .nav {
         position: static;
@@ -71,7 +69,6 @@ body {
     }
 }
 
-
 .nav.nav-open a {
     opacity: 1;
     transform: translateX(0);
@@ -83,7 +80,6 @@ body {
     cursor: pointer;
 }
 
-/* Mobile nav drawer */
 .nav.nav-open {
     display: flex;
     flex-direction: column;
@@ -103,37 +99,34 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        z-index: 25; /* above nav */
+        z-index: 25;
     }
 
     .nav {
         flex-direction: column;
         position: fixed;
         top: 0;
-        right: -250px; /* hidden by default */
+        right: -250px;
         width: 250px;
         height: 100vh;
         padding-top: 100px;
         background: var(--white);
         gap: 20px;
-        transition: right 0.3s ease; /* smooth slide */
+        transition: right 0.3s ease;
         box-shadow: -4px 0 15px rgba(0,0,0,0.2);
         z-index: 20;
     }
 
-    /* When open */
     .nav.nav-open {
         right: 0;
     }
 
-    /* Links */
     .nav a {
         padding: 16px 24px;
         font-size: 1.1rem;
     }
 }
 
-/* Hero */
 .hero {
     padding: 90px 0;
     text-align: center;
@@ -148,7 +141,6 @@ body {
     font-size: 42px;
 }
 
-/* Practice */
 .practice {
     padding: 80px 0;
 }
@@ -194,7 +186,6 @@ body {
     animation: card-hover-pulse 1.5s ease-in-out 1;
 }
 
-/* About */
 .about {
     padding: 80px 0;
 }
@@ -219,7 +210,6 @@ body {
     transform: scale(1.02);
 }
 
-/* Contact */
 .contact {
     background: var(--light);
     padding: 80px 0;
@@ -238,7 +228,7 @@ input, select, textarea {
 }
 
 .contact p, .contact p strong {
-    color: inherit; /* Let dark mode handle color */
+    color: inherit;
 }
 
 .contact-methods {
@@ -263,7 +253,6 @@ input, select, textarea {
     height: 18px;
 }
 
-/* Buttons */
 .btn-primary {
     display: inline-block;
     margin-top: 28px;
@@ -294,8 +283,8 @@ input, select, textarea {
 }
 
 .footer {
-    background: #0B1428; /* deep navy for professional look */
-    color: #E5C07B; /* soft gold accent for text */
+    background: #0B1428;
+    color: #E5C07B; 
     text-align: center;
     padding: 32px 20px;
     font-size: 0.95rem;
@@ -303,13 +292,13 @@ input, select, textarea {
 }
 
 .footer a {
-    color: #F0C36D; /* slightly brighter gold for links */
+    color: #F0C36D;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: #FFD77A; /* highlight on hover */
+    color: #FFD77A;
 }
 
 .footer .footer-content p {
@@ -321,8 +310,8 @@ input, select, textarea {
 }
 
 body.dark .footer {
-    background: #050c1a; /* dark navy */
-    color: #E5C07B; /* maintain gold accent */
+    background: #050c1a;
+    color: #E5C07B;
 }
 
 body.dark .footer a {
@@ -333,21 +322,19 @@ body.dark .footer a:hover {
     color: #FFD77A;
 }
 
-
-/* Modal updates for owner image */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.9);
-    justify-content: center;   /* center content horizontally */
-    align-items: center;       /* center content vertically */
+    justify-content: center;
+    align-items: center; 
     z-index: 1000;
 }
 
 .modal-image {
     max-width: 90%;
-    max-height: 90vh;      /* ensures image fits viewport height */
+    max-height: 90vh;
     width: auto;
     height: auto;
     border-radius: 14px;
@@ -375,7 +362,6 @@ body.dark .footer a:hover {
     background: rgba(0,0,0,0.7);
 }
 
-/* Practice Hero */
 .practice-hero {
     background: linear-gradient(
         rgba(11, 28, 61, 0.85),
@@ -395,7 +381,6 @@ body.dark .footer a:hover {
     opacity: 0.95;
 }
 
-/* Breadcrumb */
 .breadcrumb {
     font-size: 0.85rem;
     margin-bottom: 15px;
@@ -433,7 +418,6 @@ body.dark .footer a:hover {
     font-weight: 600;
 }
 
-/* Practice wrapper & content */
 .practice-inner {
     background: #f9fafc;
 }
@@ -468,7 +452,6 @@ body.dark .footer a:hover {
     padding-left: 8px;
 }
 
-/* Sidebar */
 .practice-sidebar {
     position: relative;
 }
@@ -511,7 +494,6 @@ body.dark .footer a:hover {
     animation: pulse-loop 1.8s ease-in-out infinite;
 }
 
-/* Owner image */
 .owner-img {
     width: 100%;
     max-width: 400px;
@@ -526,7 +508,6 @@ body.dark .footer a:hover {
     transform: scale(1.02);
 }
 
-/* Animations */
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
     50% { transform: scale(1.03); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
@@ -544,7 +525,6 @@ body.dark .footer a:hover {
     50% { transform: translateY(-8px); box-shadow: 0 22px 45px rgba(0,0,0,0.12);}
 }
 
-/* Dark mode */
 body.dark {
     background: var(--navy-dark);
     color: #eaeaea;
@@ -604,8 +584,6 @@ body.dark .sidebar-card a.active:hover {
     transform: translateY(-2px);
 }
 
-
-
 .dark-toggle {
     cursor: pointer;
     font-size: 14px;
@@ -617,7 +595,6 @@ body.dark .dark-toggle {
     color: var(--gold);
 }
 
-/* Media queries */
 @media (max-width:900px){
     .practice-wrapper{grid-template-columns:1fr;}
     .practice-content{padding:25px;}
@@ -629,9 +606,6 @@ body.dark .dark-toggle {
 }
 
 .founder-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
     background: white;
     padding: 32px;
     border-radius: 12px;
@@ -640,14 +614,30 @@ body.dark .dark-toggle {
 }
 
 .founder-img {
-    width: 250px;
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    margin: 16px auto 6px auto;
     border-radius: 12px;
+    border: 4px solid var(--gold);
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-instruction {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    font-style: italic;
+    margin-bottom: 18px;
+    user-select: none;
 }
 
 .founder-info {
     flex: 1;
     min-width: 250px;
+    text-align: center;
 }
 
 .founder-info h2 {
